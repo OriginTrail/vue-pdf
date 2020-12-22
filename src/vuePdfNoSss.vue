@@ -7,7 +7,7 @@
 
         var pdfjsWrapper = require('./pdfjsWrapper.js').default;
         var PDFJS = require('pdfjs-dist/es5/build/pdf.js');
-        var pdfjsWorker = require('pdfjs-dist/build/pdf.worker.entry');
+        var pdfjsWorker = require('pdfjs-dist/build/pdf.worker.entry').default;
         PDFJS.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 
         var component = componentFactory(pdfjsWrapper(PDFJS));
